@@ -1,0 +1,10 @@
+<h3>Here are all the members in this team:</h3>
+
+    <ul>
+      <% @team.individuals().each() do |individual| %>
+        <li><a href="/members/<%= individual.id() %>"><%= individual.member_name() %> <%= individual.role() %> <%= individual.gender() %></a></li>
+      <% end %>
+    </ul>
+
+    <a href="/teams/<%= @team.id%>/members/new">Add a new vehicle</a>
+    <a href="/">Return to Main Page</a>
